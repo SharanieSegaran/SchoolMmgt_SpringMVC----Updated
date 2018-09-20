@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Student</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <div align="center">
+        <h1>New/Edit Student</h1>
+        <form:form action="saveStudent" method="post" modelAttribute="student">
+        <table>
+            <form:hidden path="id"/>
+            <tr>
+                <td>Student Name:</td>
+                <td><form:input path="name" /></td>
+            </tr>
+            <tr>
+                <td>Student NRIC</td>
+                <td><form:input path="ic" /></td>
+            </tr>
+            <tr>
+                <td>Student Gender</td>
+                <td><form:input path="gender" /></td>
+            </tr>
+            <tr>
+                <td>Student Contact</td>
+                <td><form:input path="contact" /></td>
+            </tr>
+             <tr>
+                <td>Student Email</td>
+                <td><form:input path="email" /></td>
+            </tr>
+             <tr>
+                <td>Student Course ID</td>
+                <td><form:input path="courseid" /></td>
+            </tr>
+             <tr>
+                <td>Student Intake Code</td>
+                <td><form:input path="intake" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Save"></td>
+            </tr>
+        </table>
+        </form:form>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>HOME</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <div align="center">
+        <h1>Student List</h1>
+        <h3>
+            <a href="newStudent">New Student</a>
+        </h3>
+        <table border="1">
+ 
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Student NRIC</th>
+            <th>Gender</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Course ID</th>
+            <th>Intake</th>
+            <th>Action</th>
+            
+ 
+            <c:forEach var="student" items="${listStudent}">
+                <tr>
+ 
+                    <td>${student.id}</td>
+                    <td>${student.name}</td>
+                    <td>${student.ic}</td>
+                    <td>${student.gender}</td>
+                    <td>${student.contact}</td>
+                    <td>${student.email}</td>
+                    <td>${student.courseid}</td>
+                    <td>${student.intake}</td>
+
+                    <td><a href="editStudent?id=${student.id}">Edit</a>
+                             <a
+                        href="deleteStudent?id=${student.id}">Delete</a></td>
+ 
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+            <body>
+    <div align="center">
+        <h1>Lecturer List</h1>
+        <h3>
+            <a href="newLecturer">New Lecturer</a>
+        </h3>
+        <table border="1">
+ 
+            <th>Lecturer ID</th>
+            <th>Lecturer Name</th>
+            <th>Lecturer NRIC</th>
+            <th>Lecturer Gender</th>
+            <th>Lecturer Contact</th>
+            <th>Lecturer Email</th>
+            <th>Subject</th>
+            <th>Action</th>
+ 
+            <c:forEach var="lecturer" items="${listLecturer}">
+                <tr>
+ 
+                    <td>${lecturer.lid}</td>
+                    <td>${lecturer.lname}</td>
+                    <td>${lecturer.lic}</td>
+                    <td>${lecturer.lgender}</td>
+                    <td>${lecturer.lcontact}</td>
+                    <td>${lecturer.lemail}</td>
+                    <td>${lecturer.subject}</td>
+                    <td><a href="editLecturer?id=${lecturer.lid}">Edit</a>
+                             <a
+                        href="deleteLecturer?id=${lecturer.lid}">Delete</a></td>
+ 
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    </body>
+</html>

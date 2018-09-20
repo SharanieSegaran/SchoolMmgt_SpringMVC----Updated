@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Lecturer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <div align="center">
+        <h1>New/Edit Lecturer</h1>
+        <form:form action="saveLecturer" method="post" modelAttribute="lecturer">
+        <table>
+            <form:hidden path="lid"/>
+            <tr>
+                <td>Lecturer Name:</td>
+                <td><form:input path="lname" /></td>
+            </tr>
+            <tr>
+                <td>Lecturer NRIC</td>
+                <td><form:input path="lic" /></td>
+            </tr>
+            <tr>
+                <td>Lecturer Gender</td>
+                <td><form:input path="lgender" /></td>
+            </tr>
+            <tr>
+                <td>Lecturer Contact</td>
+                <td><form:input path="lcontact" /></td>
+            </tr>
+             <tr>
+                <td>Lecturer Email</td>
+                <td><form:input path="lemail" /></td>
+            </tr>
+             <tr>
+                <td>Subject</td>
+                <td><form:input path="subject" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Save"></td>
+            </tr>
+        </table>
+        </form:form>
+    </div>
+    </body>
+</html>
